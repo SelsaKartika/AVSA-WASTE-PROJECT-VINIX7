@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AVSA Waste - Selamat Datang</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #DFF9E8;
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+        }
+
+        .onboarding {
+            text-align: center;
+            padding: 20px 16px;
+            animation: fadeIn 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 90vh;
+            justify-content: space-between;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-container {
+            margin-bottom: 24px;
+        }
+
+        .logo-svg {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        @media (min-width: 375px) {
+            .logo-svg {
+                width: 160px;
+                height: 160px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .logo-svg {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        .app-name {
+            font-size: clamp(28px, 8vw, 36px);
+            font-weight: 800;
+            color: #1e3a5f;
+            margin-top: 16px;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: clamp(14px, 4vw, 16px);
+            color: #7B7B7B;
+            margin-top: 16px;
+            line-height: 1.6;
+            font-weight: 500;
+            padding: 0 20px;
+        }
+
+        .button-section {
+            margin-top: 32px;
+            width: 100%;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+        }
+
+        @media (max-height: 700px) {
+            .button-section {
+                margin-top: 20px;
+            }
+        }
+
+        .btn {
+            width: 100%;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            touch-action: manipulation;
+            -webkit-appearance: none;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-primary {
+            background-color: #16A34A;
+            color: white;
+            box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #15803d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(22, 163, 74, 0.4);
+        }
+
+        .btn-outline {
+            background-color: #F3F4F6;
+            color: #16A34A;
+            border: 2px solid #16A34A;
+        }
+
+        .btn-outline:hover {
+            background-color: #16A34A;
+            color: white;
+        }
+
+        .version-info {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #7B7B7B;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="onboarding">
+            <div class="logo-section">
+                <div class="logo-container">
+                    <!-- Logo AVSA Waste -->
+                    <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Recycle arrows -->
+                        <path d="M100 20 L120 50 L110 50 L110 70 L130 70 L130 60 L150 90 L120 110 L120 100 L100 100 L100 120 L110 120 L90 150 L60 130 L70 130 L70 110 L50 110 L50 120 L30 90 L60 70 L60 80 L80 80 L80 60 L70 60 Z" 
+                              fill="none" stroke="#22C55E" stroke-width="8" stroke-linejoin="round"/>
+                        
+                        <!-- Trash bin -->
+                        <rect x="75" y="85" width="50" height="60" rx="5" fill="#1e3a5f"/>
+                        <rect x="70" y="75" width="60" height="15" rx="3" fill="#1e3a5f"/>
+                        <rect x="85" y="65" width="30" height="15" rx="2" fill="#1e3a5f"/>
+                        
+                        <!-- Truck icon -->
+                        <rect x="130" y="95" width="35" height="25" rx="3" fill="#22C55E"/>
+                        <circle cx="140" cy="125" r="6" fill="#333"/>
+                        <circle cx="155" cy="125" r="6" fill="#333"/>
+                        
+                        <!-- Leaves -->
+                        <ellipse cx="60" cy="50" rx="15" ry="8" fill="#22C55E" transform="rotate(-30 60 50)"/>
+                        <ellipse cx="140" cy="40" rx="15" ry="8" fill="#22C55E" transform="rotate(30 140 40)"/>
+                        <ellipse cx="160" cy="70" rx="12" ry="6" fill="#22C55E" transform="rotate(45 160 70)"/>
+                    </svg>
+                    
+                    <div class="app-name">AVSA WASTE</div>
+                </div>
+                
+                <p class="tagline">
+                    Aplikasi pelaporan sampah real-time<br>
+                    untuk warga, petugas, dan<br>
+                    pengelola lingkungan
+                </p>
+            </div>
+            
+            <div class="button-section">
+                <div class="button-group">
+                    <a href="login.html" class="btn btn-primary">
+                        Masuk Sebagai Warga
+                    </a>
+                    <a href="login.html" class="btn btn-outline">
+                        Masuk Sebagai Petugas
+                    </a>
+                </div>
+                <p class="version-info">Versi 1.0.0</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
